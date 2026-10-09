@@ -1,0 +1,169 @@
+{
+  "_meta": {
+    "last_updated": "2025-01-01",
+    "source_law": "Loi n°2024-48 du 9 décembre 2024 (LF 2025)",
+    "warning": "Verify against official texts before production use"
+  },
+  "IRPP": {
+    "brackets_2025": [
+      {
+        "min": 0,
+        "max": 5000,
+        "rate": 0.0,
+        "label": "Exonéré"
+      },
+      {
+        "min": 5000,
+        "max": 10000,
+        "rate": 0.15,
+        "label": "Tranche 15%"
+      },
+      {
+        "min": 10000,
+        "max": 20000,
+        "rate": 0.25,
+        "label": "Tranche 25%"
+      },
+      {
+        "min": 20000,
+        "max": 30000,
+        "rate": 0.3,
+        "label": "Tranche 30%"
+      },
+      {
+        "min": 30000,
+        "max": 50000,
+        "rate": 0.33,
+        "label": "Tranche 33%"
+      },
+      {
+        "min": 50000,
+        "max": null,
+        "rate": 0.35,
+        "label": "Tranche max 35%"
+      }
+    ],
+    "minimum_irpp": 100,
+    "taux_retenue_salaire": 0.15,
+    "deduction_chef_famille": 300,
+    "deduction_enfant": 100,
+    "deduction_max_enfants": 4,
+    "deduction_epargne_retraite_max": 10000,
+    "forfait_frais_professionnels_rate": 0.1,
+    "forfait_frais_professionnels_max": 2000,
+    "regime_forfaitaire": {
+      "seuil_ca_services": 100000,
+      "seuil_ca_commerce": 150000,
+      "taux": 0.03,
+      "note": "Régime forfaitaire pour petits contribuables"
+    }
+  },
+  "IS": {
+    "taux_standard": 0.15,
+    "taux_eleve": 0.35,
+    "taux_intermediaire": 0.2,
+    "brackets_progressifs_2025": {
+      "applicable_a": "Sociétés soumises au taux standard (hors secteurs exclus)",
+      "tranches": [
+        {
+          "min": 0,
+          "max": 100000,
+          "rate": 0.1
+        },
+        {
+          "min": 100000,
+          "max": 400000,
+          "rate": 0.15
+        },
+        {
+          "min": 400000,
+          "max": null,
+          "rate": 0.15
+        }
+      ]
+    },
+    "secteurs_taux_35": [
+      "Banques",
+      "Établissements financiers",
+      "Compagnies d'assurance",
+      "Opérateurs téléphoniques",
+      "Hydrocarbures"
+    ],
+    "taux_minimum_is": {
+      "rate": 0.002,
+      "note": "Si IS calculé < minimum, payer le minimum IS"
+    },
+    "SUARL_SARL": {
+      "capital_minimum_SUARL": 1000,
+      "capital_minimum_SARL": 1000,
+      "note": "Soumises à IS standard, bénéfices retirés soumis à retenue 10%"
+    }
+  },
+  "TVA": {
+    "taux": {
+      "standard": 0.19,
+      "intermediaire": 0.13,
+      "reduit": 0.07,
+      "super_reduit": 0.06,
+      "zero": 0.0
+    },
+    "seuil_assujettissement": {
+      "commerce_industrie": 100000,
+      "services": 50000,
+      "note": "En dessous: régime franchise (non soumis TVA)"
+    },
+    "franchise_tva": {
+      "applicable": true,
+      "conditions": "CA < seuils ci-dessus ET option non-TVA",
+      "avantages": "Pas de collecte TVA, pas de déclaration mensuelle"
+    },
+    "exemptions_principales": [
+      "Produits alimentaires de base (pain, lait, huile, etc.)",
+      "Médicaments et produits pharmaceutiques",
+      "Services d'enseignement",
+      "Services médicaux",
+      "Exportations (taux 0%)",
+      "Agriculture (première transformation)"
+    ],
+    "periodicite_declaration": {
+      "mensuelle": "CA > 100,000 DT",
+      "trimestrielle": "CA ≤ 100,000 DT (option)"
+    }
+  },
+  "CNSS": {
+    "regime_general_salarie_2025": {
+      "part_salariale": 0.0968,
+      "part_patronale": 0.1707,
+      "total": 0.2675,
+      "plafond_assiette": 6000,
+      "smig_48h_mensuel": 528.32,
+      "smig_40h_mensuel": 448.24,
+      "AT_MT_range": [
+        0.004,
+        0.04
+      ]
+    },
+    "regime_independant_2025": {
+      "taux": 0.1471,
+      "note": "Couvre maladie-maternité + vieillesse",
+      "base_calcul": "Revenu forfaitaire basé coefficient × SMIG",
+      "source": "cnss.tn/non-salarie"
+    },
+    "echeances": {
+      "DMS": "Avant le 15 de chaque mois (mois précédent)",
+      "DAS": "Annuelle — récapitulatif cohérent avec DMS",
+      "penalite_retard": "100 DT/mois de retard par tranche"
+    }
+  },
+  "RETENUES_SOURCE": {
+    "honoraires_personnes_physiques": 0.15,
+    "honoraires_personnes_morales": 0.25,
+    "loyers": 0.15,
+    "dividendes_residents": 0.1,
+    "dividendes_non_residents": 0.05,
+    "interets_bancaires": 0.2
+  },
+  "DROIT_TIMBRE": {
+    "facture_standard": 1.0
+  }
+}

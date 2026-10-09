@@ -1,0 +1,1322 @@
+2026-03-15 22:22:51,926 [INFO] === STEP 1: DOWNLOADING PDFs ===
+2026-03-15 22:22:59,509 [INFO] [OK] irpp_is_2024 (2200KB)
+2026-03-15 22:23:08,326 [INFO] [OK] irpp_is_2025 (1495KB)
+2026-03-15 22:23:17,108 [INFO] [OK] tva_2024 (3410KB)
+2026-03-15 22:23:36,995 [INFO] [OK] cdpf_2025 (2445KB)
+2026-03-15 22:23:46,089 [INFO] [OK] cdpf_2023 (1514KB)
+2026-03-15 22:23:48,234 [INFO] [OK] nc_03_2025 (376KB)
+2026-03-15 22:23:50,472 [WARNING] [RETRY 1] nc_08_2025: 404 Client Error: Not Found for url: https://jibaya.tn/wp-content/uploads/2025/02/Note-Commune-N08-2025.pdf
+2026-03-15 22:23:53,771 [WARNING] [RETRY 2] nc_08_2025: 404 Client Error: Not Found for url: https://jibaya.tn/wp-content/uploads/2025/02/Note-Commune-N08-2025.pdf
+2026-03-15 22:23:57,882 [WARNING] [RETRY 3] nc_08_2025: 404 Client Error: Not Found for url: https://jibaya.tn/wp-content/uploads/2025/02/Note-Commune-N08-2025.pdf
+2026-03-15 22:23:57,882 [ERROR] [FAILED] nc_08_2025 — manual download required
+2026-03-15 22:23:57,883 [ERROR]   URL: https://jibaya.tn/wp-content/uploads/2025/02/Note-Commune-N08-2025.pdf
+2026-03-15 22:24:09,624 [INFO] [OK] nc_12_2024 (545KB)
+2026-03-15 22:24:09,626 [INFO] Download complete: 7/8 successful
+2026-03-15 22:24:09,629 [INFO] Pipeline complete.
+2026-03-15 22:30:30,728 [INFO] === STEP 2: EXTRACTING TEXT ===
+2026-03-15 22:30:45,203 [INFO] [OK] irpp_is_2024: 680,978 chars extracted
+2026-03-15 22:30:56,550 [INFO] [OK] irpp_is_2025: 294,916 chars extracted
+2026-03-15 22:31:20,029 [INFO] [OK] tva_2024: 922,929 chars extracted
+2026-03-15 22:31:37,320 [INFO] [OK] cdpf_2025: 508,480 chars extracted
+2026-03-15 22:31:52,143 [INFO] [OK] cdpf_2023: 483,828 chars extracted
+2026-03-15 22:31:52,560 [INFO] [OK] nc_03_2025: 10,415 chars extracted
+2026-03-15 22:31:52,560 [WARNING] [MISSING PDF] nc_08_2025 — skipping extraction
+2026-03-15 22:31:53,090 [INFO] [OK] nc_12_2024: 14,560 chars extracted
+2026-03-15 22:31:53,090 [INFO] Pipeline complete.
+2026-03-15 22:32:32,722 [INFO] === STEP 3: CHUNKING BY ARTICLE ===
+2026-03-15 22:32:32,742 [INFO] [CHUNKED] cdpf_2023: 467 chunks
+2026-03-15 22:32:32,763 [INFO] [CHUNKED] cdpf_2025: 473 chunks
+2026-03-15 22:32:32,788 [INFO] [CHUNKED] irpp_is_2024: 297 chunks
+2026-03-15 22:32:32,799 [INFO] [CHUNKED] irpp_is_2025: 137 chunks
+2026-03-15 22:32:32,799 [WARNING] No article structure in nc_03_2025, using paragraph chunking
+2026-03-15 22:32:32,800 [INFO] [CHUNKED] nc_03_2025: 0 chunks
+2026-03-15 22:32:32,800 [WARNING] No article structure in nc_12_2024, using paragraph chunking
+2026-03-15 22:32:32,801 [INFO] [CHUNKED] nc_12_2024: 0 chunks
+2026-03-15 22:32:32,830 [INFO] [CHUNKED] tva_2024: 265 chunks
+2026-03-15 22:32:32,861 [INFO] Total chunks: 1639
+2026-03-15 22:32:32,863 [INFO] Pipeline complete.
+2026-03-15 22:32:52,760 [INFO] === STEP 5: BUILDING VECTOR INDEX ===
+2026-03-15 22:32:54,847 [INFO] Indexing 1639 chunks...
+2026-03-15 22:33:08,091 [INFO] Load pretrained SentenceTransformer: intfloat/multilingual-e5-large
+2026-03-15 22:36:55,824 [INFO] === STEP 5: BUILDING VECTOR INDEX ===
+2026-03-15 22:36:56,464 [INFO] Indexing 1639 chunks...
+2026-03-15 22:37:00,677 [INFO] Load pretrained SentenceTransformer: intfloat/multilingual-e5-base
+2026-03-15 22:38:05,365 [INFO] === STEP 5: BUILDING VECTOR INDEX ===
+2026-03-15 22:38:05,981 [INFO] Indexing 1639 chunks...
+2026-03-15 22:38:10,247 [INFO] Load pretrained SentenceTransformer: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+2026-03-15 22:41:22,640 [INFO] === STEP 5: BUILDING VECTOR INDEX ===
+2026-03-15 22:41:23,295 [INFO] Indexing 1639 chunks...
+2026-03-15 22:41:27,413 [INFO] Load pretrained SentenceTransformer: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+2026-03-15 22:45:01,141 [INFO] === STEP 5: BUILDING VECTOR INDEX ===
+2026-03-15 22:45:01,769 [INFO] Indexing 1639 chunks...
+2026-03-15 22:45:05,921 [INFO] Load pretrained SentenceTransformer: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+2026-03-15 22:52:30,082 [INFO] === STEP 5: BUILDING VECTOR INDEX ===
+2026-03-15 22:52:30,790 [INFO] Indexing 1639 chunks...
+2026-03-15 22:52:36,375 [INFO] Load pretrained SentenceTransformer: distiluse-base-multilingual-cased-v1
+2026-03-15 23:06:02,732 [INFO] === STEP 5: BUILDING VECTOR INDEX ===
+2026-03-15 23:06:03,456 [INFO] Indexing 1639 chunks...
+2026-03-15 23:06:08,155 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-03-15 23:09:36,581 [INFO] === STEP 5: BUILDING VECTOR INDEX ===
+2026-03-15 23:09:37,201 [INFO] Indexing 1639 chunks...
+2026-03-15 23:09:42,333 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-03-15 23:16:02,662 [INFO] Index built. Collections: ['TVA', 'IRPP_IS', 'CDPF', 'all']
+2026-03-15 23:16:02,664 [INFO] Pipeline complete.
+2026-03-16 00:13:58,245 [INFO] === STEP 4: GENERATING RATES CONFIG ===
+2026-03-16 00:13:58,246 [INFO] Rates config saved: tunisia_tax_data\rates_config\tax_rates_2025.json
+2026-03-16 00:13:58,246 [INFO] Pipeline complete.
+2026-03-27 20:52:15,376 [INFO] Load pretrained SentenceTransformer: intfloat/multilingual-e5-large
+2026-03-27 20:53:17,481 [INFO] Load pretrained SentenceTransformer: intfloat/multilingual-e5-large
+2026-03-27 20:54:41,932 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2026-04-01 15:42:57,139 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-04-01 15:43:34,035 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+2026-04-01 15:48:16,399 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+2026-04-01 15:53:39,345 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-01 15:53:46,062 [INFO] Load pretrained SentenceTransformer: intfloat/multilingual-e5-large
+2026-04-01 15:53:46,707 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 15:53:46,768 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/modules.json "HTTP/1.1 200 OK"
+2026-04-01 15:53:46,960 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/config_sentence_transformers.json "HTTP/1.1 404 Not Found"
+2026-04-01 15:53:47,146 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/config_sentence_transformers.json "HTTP/1.1 404 Not Found"
+2026-04-01 15:53:47,322 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 15:53:47,323 [WARNING] Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-04-01 15:53:47,389 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/README.md "HTTP/1.1 200 OK"
+2026-04-01 15:53:47,597 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 15:53:47,650 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/modules.json "HTTP/1.1 200 OK"
+2026-04-01 15:53:47,839 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 15:53:47,893 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-04-01 15:53:48,079 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-04-01 15:53:48,263 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 15:53:48,336 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/config.json "HTTP/1.1 200 OK"
+2026-04-01 15:53:48,566 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+2026-04-01 15:53:48,786 [INFO] HTTP Request: GET https://huggingface.co/api/models/intfloat/multilingual-e5-large/xet-read-token/0dc5580a448e4284468b8909bae50fa925907bc5 "HTTP/1.1 200 OK"
+2026-04-01 16:04:29,171 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:04:29,349 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/config.json "HTTP/1.1 200 OK"
+2026-04-01 16:04:29,551 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:04:29,642 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-04-01 16:04:29,709 [INFO] HTTP Request: GET https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-04-01 16:04:29,931 [INFO] HTTP Request: GET https://huggingface.co/api/models/intfloat/multilingual-e5-large/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-04-01 16:04:30,104 [INFO] HTTP Request: GET https://huggingface.co/api/models/intfloat/multilingual-e5-large/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-04-01 16:04:30,288 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/sentencepiece.bpe.model "HTTP/1.1 302 Found"
+2026-04-01 16:04:33,112 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/tokenizer.json "HTTP/1.1 302 Found"
+2026-04-01 16:04:36,496 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/added_tokens.json "HTTP/1.1 404 Not Found"
+2026-04-01 16:04:36,699 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/special_tokens_map.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:04:36,764 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/special_tokens_map.json "HTTP/1.1 200 OK"
+2026-04-01 16:04:36,821 [INFO] HTTP Request: GET https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/special_tokens_map.json "HTTP/1.1 200 OK"
+2026-04-01 16:04:37,008 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/chat_template.jinja "HTTP/1.1 404 Not Found"
+2026-04-01 16:04:38,943 [INFO] HTTP Request: GET https://huggingface.co/api/models/intfloat/multilingual-e5-large "HTTP/1.1 200 OK"
+2026-04-01 16:04:39,213 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:04:39,265 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-04-01 16:04:39,341 [INFO] HTTP Request: GET https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-04-01 16:04:39,520 [INFO] HTTP Request: GET https://huggingface.co/api/models/intfloat/multilingual-e5-large "HTTP/1.1 200 OK"
+2026-04-01 16:04:40,087 [INFO] Retriever initialized
+2026-04-01 16:11:18,312 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-01 16:11:20,912 [INFO] Load pretrained SentenceTransformer: intfloat/multilingual-e5-large
+2026-04-01 16:11:21,656 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:11:21,720 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/modules.json "HTTP/1.1 200 OK"
+2026-04-01 16:11:21,884 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/config_sentence_transformers.json "HTTP/1.1 404 Not Found"
+2026-04-01 16:11:22,048 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/config_sentence_transformers.json "HTTP/1.1 404 Not Found"
+2026-04-01 16:11:22,204 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:11:22,275 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/README.md "HTTP/1.1 200 OK"
+2026-04-01 16:11:22,467 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:11:22,528 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/modules.json "HTTP/1.1 200 OK"
+2026-04-01 16:11:22,703 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:11:22,704 [WARNING] Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-04-01 16:11:22,770 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-04-01 16:11:22,927 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-04-01 16:11:23,089 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:11:23,144 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/config.json "HTTP/1.1 200 OK"
+2026-04-01 16:11:23,461 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:11:23,516 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/config.json "HTTP/1.1 200 OK"
+2026-04-01 16:11:23,681 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:11:23,743 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-04-01 16:11:24,093 [INFO] HTTP Request: GET https://huggingface.co/api/models/intfloat/multilingual-e5-large/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-04-01 16:11:24,273 [INFO] HTTP Request: GET https://huggingface.co/api/models/intfloat/multilingual-e5-large/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-04-01 16:11:26,051 [INFO] HTTP Request: GET https://huggingface.co/api/models/intfloat/multilingual-e5-large "HTTP/1.1 200 OK"
+2026-04-01 16:11:26,347 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:11:26,412 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-04-01 16:11:26,583 [INFO] HTTP Request: GET https://huggingface.co/api/models/intfloat/multilingual-e5-large "HTTP/1.1 200 OK"
+2026-04-01 16:11:26,689 [INFO] Retriever initialized
+2026-04-01 16:12:06,141 [INFO] === STEP 1: DOWNLOADING PDFs ===
+2026-04-01 16:12:06,151 [INFO] [SKIP] irpp_is_2024 already downloaded
+2026-04-01 16:12:06,152 [INFO] [SKIP] irpp_is_2025 already downloaded
+2026-04-01 16:12:06,152 [INFO] [SKIP] tva_2024 already downloaded
+2026-04-01 16:12:06,153 [INFO] [SKIP] cdpf_2025 already downloaded
+2026-04-01 16:12:06,153 [INFO] [SKIP] cdpf_2023 already downloaded
+2026-04-01 16:12:06,154 [INFO] [SKIP] nc_03_2025 already downloaded
+2026-04-01 16:12:08,281 [WARNING] [RETRY 1] nc_08_2025: 404 Client Error: Not Found for url: https://jibaya.tn/wp-content/uploads/2025/02/Note-Commune-N08-2025.pdf
+2026-04-01 16:12:12,724 [WARNING] [RETRY 2] nc_08_2025: 404 Client Error: Not Found for url: https://jibaya.tn/wp-content/uploads/2025/02/Note-Commune-N08-2025.pdf
+2026-04-01 16:12:17,615 [WARNING] [RETRY 3] nc_08_2025: 404 Client Error: Not Found for url: https://jibaya.tn/wp-content/uploads/2025/02/Note-Commune-N08-2025.pdf
+2026-04-01 16:12:17,616 [ERROR] [FAILED] nc_08_2025 — manual download required
+2026-04-01 16:12:17,617 [ERROR]   URL: https://jibaya.tn/wp-content/uploads/2025/02/Note-Commune-N08-2025.pdf
+2026-04-01 16:12:21,618 [INFO] [SKIP] nc_12_2024 already downloaded
+2026-04-01 16:12:21,619 [INFO] Download complete: 7/8 successful
+2026-04-01 16:12:21,620 [INFO] === STEP 2: EXTRACTING TEXT ===
+2026-04-01 16:12:21,623 [INFO] [SKIP] irpp_is_2024 already extracted
+2026-04-01 16:12:21,652 [INFO] [SKIP] irpp_is_2025 already extracted
+2026-04-01 16:12:21,679 [INFO] [SKIP] tva_2024 already extracted
+2026-04-01 16:12:21,694 [INFO] [SKIP] cdpf_2025 already extracted
+2026-04-01 16:12:21,711 [INFO] [SKIP] cdpf_2023 already extracted
+2026-04-01 16:12:21,723 [INFO] [SKIP] nc_03_2025 already extracted
+2026-04-01 16:12:21,734 [WARNING] [MISSING PDF] nc_08_2025 — skipping extraction
+2026-04-01 16:12:21,734 [INFO] [SKIP] nc_12_2024 already extracted
+2026-04-01 16:12:21,744 [INFO] === STEP 3: CHUNKING BY ARTICLE ===
+2026-04-01 16:12:21,765 [INFO] [CHUNKED] cdpf_2023: 467 chunks
+2026-04-01 16:12:21,786 [INFO] [CHUNKED] cdpf_2025: 473 chunks
+2026-04-01 16:12:21,808 [INFO] [CHUNKED] irpp_is_2024: 297 chunks
+2026-04-01 16:12:21,818 [INFO] [CHUNKED] irpp_is_2025: 137 chunks
+2026-04-01 16:12:21,819 [WARNING] No article structure in nc_03_2025, using paragraph chunking
+2026-04-01 16:12:21,820 [INFO] [CHUNKED] nc_03_2025: 0 chunks
+2026-04-01 16:12:21,820 [WARNING] No article structure in nc_12_2024, using paragraph chunking
+2026-04-01 16:12:21,821 [INFO] [CHUNKED] nc_12_2024: 0 chunks
+2026-04-01 16:12:21,850 [INFO] [CHUNKED] tva_2024: 265 chunks
+2026-04-01 16:12:21,885 [INFO] Total chunks: 1639
+2026-04-01 16:12:21,887 [INFO] === STEP 4: GENERATING RATES CONFIG ===
+2026-04-01 16:12:21,889 [INFO] Rates config saved: tunisia_tax_data\rates_config\tax_rates_2025.json
+2026-04-01 16:12:21,889 [INFO] === STEP 5: BUILDING VECTOR INDEX ===
+2026-04-01 16:12:22,711 [INFO] Indexing 1639 chunks...
+2026-04-01 16:12:27,628 [INFO] Load pretrained SentenceTransformer: intfloat/multilingual-e5-large
+2026-04-01 16:12:28,265 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:12:28,319 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/modules.json "HTTP/1.1 200 OK"
+2026-04-01 16:12:28,519 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/config_sentence_transformers.json "HTTP/1.1 404 Not Found"
+2026-04-01 16:12:28,519 [WARNING] Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-04-01 16:12:28,702 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/config_sentence_transformers.json "HTTP/1.1 404 Not Found"
+2026-04-01 16:12:28,879 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:12:28,939 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/README.md "HTTP/1.1 200 OK"
+2026-04-01 16:12:29,119 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:12:29,192 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/modules.json "HTTP/1.1 200 OK"
+2026-04-01 16:12:29,365 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:12:29,425 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-04-01 16:12:29,591 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-04-01 16:12:29,764 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:12:29,817 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/config.json "HTTP/1.1 200 OK"
+2026-04-01 16:12:30,114 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:12:30,170 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/config.json "HTTP/1.1 200 OK"
+2026-04-01 16:12:30,332 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:12:30,390 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-04-01 16:12:30,554 [INFO] HTTP Request: GET https://huggingface.co/api/models/intfloat/multilingual-e5-large/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-04-01 16:12:30,761 [INFO] HTTP Request: GET https://huggingface.co/api/models/intfloat/multilingual-e5-large/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-04-01 16:12:32,595 [INFO] HTTP Request: GET https://huggingface.co/api/models/intfloat/multilingual-e5-large "HTTP/1.1 200 OK"
+2026-04-01 16:12:32,804 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:12:32,863 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-04-01 16:12:33,088 [INFO] HTTP Request: GET https://huggingface.co/api/models/intfloat/multilingual-e5-large "HTTP/1.1 200 OK"
+2026-04-01 16:23:00,764 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-01 16:23:35,238 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-01 16:23:43,656 [INFO] Load pretrained SentenceTransformer: intfloat/multilingual-e5-large
+2026-04-01 16:23:44,416 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:23:44,476 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/modules.json "HTTP/1.1 200 OK"
+2026-04-01 16:23:44,650 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/config_sentence_transformers.json "HTTP/1.1 404 Not Found"
+2026-04-01 16:23:44,829 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/config_sentence_transformers.json "HTTP/1.1 404 Not Found"
+2026-04-01 16:23:44,994 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:23:45,045 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/README.md "HTTP/1.1 200 OK"
+2026-04-01 16:23:45,223 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:23:45,225 [WARNING] Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-04-01 16:23:45,301 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/modules.json "HTTP/1.1 200 OK"
+2026-04-01 16:23:45,473 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:23:45,526 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-04-01 16:23:45,698 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-04-01 16:23:45,860 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:23:45,924 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/config.json "HTTP/1.1 200 OK"
+2026-04-01 16:23:46,558 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:23:46,613 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/config.json "HTTP/1.1 200 OK"
+2026-04-01 16:23:46,787 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:23:46,853 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-04-01 16:23:47,039 [INFO] HTTP Request: GET https://huggingface.co/api/models/intfloat/multilingual-e5-large/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-04-01 16:23:47,210 [INFO] HTTP Request: GET https://huggingface.co/api/models/intfloat/multilingual-e5-large/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-04-01 16:23:50,612 [INFO] HTTP Request: GET https://huggingface.co/api/models/intfloat/multilingual-e5-large "HTTP/1.1 200 OK"
+2026-04-01 16:23:50,925 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:23:51,006 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-04-01 16:23:51,248 [INFO] HTTP Request: GET https://huggingface.co/api/models/intfloat/multilingual-e5-large "HTTP/1.1 200 OK"
+2026-04-01 16:23:51,508 [INFO] Retriever initialized
+2026-04-01 16:23:53,711 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-01 16:24:32,658 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-01 16:24:35,753 [INFO] Load pretrained SentenceTransformer: intfloat/multilingual-e5-large
+2026-04-01 16:24:36,460 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:24:36,461 [WARNING] Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-04-01 16:24:36,515 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/modules.json "HTTP/1.1 200 OK"
+2026-04-01 16:24:36,713 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/config_sentence_transformers.json "HTTP/1.1 404 Not Found"
+2026-04-01 16:24:36,902 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/config_sentence_transformers.json "HTTP/1.1 404 Not Found"
+2026-04-01 16:24:37,075 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:24:37,140 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/README.md "HTTP/1.1 200 OK"
+2026-04-01 16:24:37,308 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:24:37,369 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/modules.json "HTTP/1.1 200 OK"
+2026-04-01 16:24:37,624 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:24:37,701 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-04-01 16:24:37,868 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-04-01 16:24:38,030 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:24:38,090 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/config.json "HTTP/1.1 200 OK"
+2026-04-01 16:24:38,576 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:24:38,630 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/config.json "HTTP/1.1 200 OK"
+2026-04-01 16:24:38,797 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:24:38,859 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-04-01 16:24:39,032 [INFO] HTTP Request: GET https://huggingface.co/api/models/intfloat/multilingual-e5-large/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-04-01 16:24:39,237 [INFO] HTTP Request: GET https://huggingface.co/api/models/intfloat/multilingual-e5-large/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-04-01 16:24:43,543 [INFO] HTTP Request: GET https://huggingface.co/api/models/intfloat/multilingual-e5-large "HTTP/1.1 200 OK"
+2026-04-01 16:24:43,813 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:24:43,872 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-04-01 16:24:44,066 [INFO] HTTP Request: GET https://huggingface.co/api/models/intfloat/multilingual-e5-large "HTTP/1.1 200 OK"
+2026-04-01 16:24:44,316 [INFO] Retriever initialized
+2026-04-01 16:24:47,725 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-01 16:24:50,011 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-01 16:24:52,123 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-01 16:25:09,399 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-01 16:25:15,730 [INFO] Load pretrained SentenceTransformer: intfloat/multilingual-e5-large
+2026-04-01 16:25:17,137 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:25:17,138 [WARNING] Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-04-01 16:25:17,226 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/modules.json "HTTP/1.1 200 OK"
+2026-04-01 16:25:17,394 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/config_sentence_transformers.json "HTTP/1.1 404 Not Found"
+2026-04-01 16:25:17,557 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/config_sentence_transformers.json "HTTP/1.1 404 Not Found"
+2026-04-01 16:25:17,719 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:25:17,770 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/README.md "HTTP/1.1 200 OK"
+2026-04-01 16:25:17,941 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:25:17,998 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/modules.json "HTTP/1.1 200 OK"
+2026-04-01 16:25:18,169 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:25:18,225 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-04-01 16:25:18,389 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-04-01 16:25:18,737 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:25:18,804 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/config.json "HTTP/1.1 200 OK"
+2026-04-01 16:25:19,415 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:25:19,473 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/config.json "HTTP/1.1 200 OK"
+2026-04-01 16:25:19,639 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:25:19,716 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-04-01 16:25:19,891 [INFO] HTTP Request: GET https://huggingface.co/api/models/intfloat/multilingual-e5-large/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-04-01 16:25:20,064 [INFO] HTTP Request: GET https://huggingface.co/api/models/intfloat/multilingual-e5-large/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-04-01 16:25:23,301 [INFO] HTTP Request: GET https://huggingface.co/api/models/intfloat/multilingual-e5-large "HTTP/1.1 200 OK"
+2026-04-01 16:25:23,600 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:25:23,653 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-04-01 16:25:23,826 [INFO] HTTP Request: GET https://huggingface.co/api/models/intfloat/multilingual-e5-large "HTTP/1.1 200 OK"
+2026-04-01 16:25:24,109 [INFO] Retriever initialized
+2026-04-01 16:25:26,313 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-01 16:25:28,556 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-01 16:25:30,328 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-01 16:25:54,331 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-01 16:25:57,185 [INFO] Load pretrained SentenceTransformer: intfloat/multilingual-e5-large
+2026-04-01 16:25:57,670 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:25:57,753 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/modules.json "HTTP/1.1 200 OK"
+2026-04-01 16:25:57,925 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/config_sentence_transformers.json "HTTP/1.1 404 Not Found"
+2026-04-01 16:25:57,952 [WARNING] Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-04-01 16:25:58,142 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/config_sentence_transformers.json "HTTP/1.1 404 Not Found"
+2026-04-01 16:25:58,361 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:25:58,433 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/README.md "HTTP/1.1 200 OK"
+2026-04-01 16:25:58,652 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:25:58,726 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/modules.json "HTTP/1.1 200 OK"
+2026-04-01 16:25:58,897 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:25:58,950 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-04-01 16:25:59,131 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-04-01 16:25:59,313 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:25:59,389 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/config.json "HTTP/1.1 200 OK"
+2026-04-01 16:26:00,077 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:26:00,147 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/config.json "HTTP/1.1 200 OK"
+2026-04-01 16:26:00,310 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:26:00,370 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-04-01 16:26:00,554 [INFO] HTTP Request: GET https://huggingface.co/api/models/intfloat/multilingual-e5-large/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-04-01 16:26:00,738 [INFO] HTTP Request: GET https://huggingface.co/api/models/intfloat/multilingual-e5-large/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-04-01 16:26:04,786 [INFO] HTTP Request: GET https://huggingface.co/api/models/intfloat/multilingual-e5-large "HTTP/1.1 200 OK"
+2026-04-01 16:26:05,059 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:26:05,115 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-04-01 16:26:05,293 [INFO] HTTP Request: GET https://huggingface.co/api/models/intfloat/multilingual-e5-large "HTTP/1.1 200 OK"
+2026-04-01 16:26:05,469 [INFO] Retriever initialized
+2026-04-01 16:26:09,053 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-01 16:26:11,929 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-01 16:26:13,897 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-01 16:27:04,244 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-01 16:27:10,900 [INFO] Load pretrained SentenceTransformer: intfloat/multilingual-e5-large
+2026-04-01 16:27:11,584 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:27:11,585 [WARNING] Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-04-01 16:27:11,661 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/modules.json "HTTP/1.1 200 OK"
+2026-04-01 16:27:11,844 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/config_sentence_transformers.json "HTTP/1.1 404 Not Found"
+2026-04-01 16:27:12,032 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/config_sentence_transformers.json "HTTP/1.1 404 Not Found"
+2026-04-01 16:27:12,193 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:27:12,247 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/README.md "HTTP/1.1 200 OK"
+2026-04-01 16:27:12,428 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:27:12,482 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/modules.json "HTTP/1.1 200 OK"
+2026-04-01 16:27:12,655 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:27:12,714 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-04-01 16:27:12,875 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-04-01 16:27:13,067 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:27:13,133 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/config.json "HTTP/1.1 200 OK"
+2026-04-01 16:27:13,655 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:27:13,715 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/config.json "HTTP/1.1 200 OK"
+2026-04-01 16:27:13,901 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:27:13,960 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-04-01 16:27:14,139 [INFO] HTTP Request: GET https://huggingface.co/api/models/intfloat/multilingual-e5-large/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-04-01 16:27:14,330 [INFO] HTTP Request: GET https://huggingface.co/api/models/intfloat/multilingual-e5-large/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-04-01 16:27:17,561 [INFO] HTTP Request: GET https://huggingface.co/api/models/intfloat/multilingual-e5-large "HTTP/1.1 200 OK"
+2026-04-01 16:27:17,824 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:27:17,875 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-04-01 16:27:18,067 [INFO] HTTP Request: GET https://huggingface.co/api/models/intfloat/multilingual-e5-large "HTTP/1.1 200 OK"
+2026-04-01 16:27:18,232 [INFO] Retriever initialized
+2026-04-01 16:27:20,835 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-01 16:27:23,252 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-01 16:27:24,883 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-01 16:29:05,164 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-01 16:29:07,965 [INFO] Load pretrained SentenceTransformer: intfloat/multilingual-e5-large
+2026-04-01 16:29:08,534 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:29:08,535 [WARNING] Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-04-01 16:29:08,583 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/modules.json "HTTP/1.1 200 OK"
+2026-04-01 16:29:08,736 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/config_sentence_transformers.json "HTTP/1.1 404 Not Found"
+2026-04-01 16:29:08,904 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/config_sentence_transformers.json "HTTP/1.1 404 Not Found"
+2026-04-01 16:29:09,103 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:29:09,164 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/README.md "HTTP/1.1 200 OK"
+2026-04-01 16:29:09,356 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:29:09,418 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/modules.json "HTTP/1.1 200 OK"
+2026-04-01 16:29:09,606 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:29:09,693 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-04-01 16:29:10,055 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-04-01 16:29:10,254 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:29:10,352 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/config.json "HTTP/1.1 200 OK"
+2026-04-01 16:29:10,845 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:29:10,938 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/config.json "HTTP/1.1 200 OK"
+2026-04-01 16:29:11,119 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:29:11,217 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-04-01 16:29:11,406 [INFO] HTTP Request: GET https://huggingface.co/api/models/intfloat/multilingual-e5-large/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-04-01 16:29:11,607 [INFO] HTTP Request: GET https://huggingface.co/api/models/intfloat/multilingual-e5-large/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-04-01 16:29:15,238 [INFO] HTTP Request: GET https://huggingface.co/api/models/intfloat/multilingual-e5-large "HTTP/1.1 200 OK"
+2026-04-01 16:29:15,507 [INFO] HTTP Request: HEAD https://huggingface.co/intfloat/multilingual-e5-large/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-01 16:29:15,563 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/intfloat/multilingual-e5-large/0dc5580a448e4284468b8909bae50fa925907bc5/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-04-01 16:29:15,753 [INFO] HTTP Request: GET https://huggingface.co/api/models/intfloat/multilingual-e5-large "HTTP/1.1 200 OK"
+2026-04-01 16:29:15,913 [INFO] Retriever initialized
+2026-04-01 16:29:18,179 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-01 16:29:20,458 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-01 16:29:22,544 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-01 16:30:25,766 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-01 16:31:44,537 [INFO] Load pretrained SentenceTransformer: intfloat/multilingual-e5-large
+2026-04-01 16:31:53,722 [INFO] Retriever initialized
+2026-04-01 16:34:51,803 [INFO] === STEP 5: BUILDING VECTOR INDEX ===
+2026-04-01 16:34:52,445 [INFO] Indexing 1639 chunks...
+2026-04-01 16:34:56,576 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-04-01 16:37:23,227 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-04-01 16:37:27,926 [INFO] Retriever initialized
+2026-04-01 16:38:14,785 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-01 16:38:17,943 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-04-01 16:38:21,953 [INFO] Retriever initialized
+2026-04-01 16:38:23,612 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-01 16:38:24,300 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-01 16:38:24,301 [INFO] Retrying request to /openai/v1/chat/completions in 11.000000 seconds
+2026-04-01 16:38:36,247 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-01 16:38:37,109 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-01 16:38:37,110 [INFO] Retrying request to /openai/v1/chat/completions in 10.000000 seconds
+2026-04-01 16:38:48,206 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-07 15:42:34,491 [INFO] === STEP 1: DOWNLOADING PDFs ===
+2026-04-07 15:42:34,509 [INFO] [SKIP] irpp_is_2024 already downloaded
+2026-04-07 15:42:34,510 [INFO] [SKIP] irpp_is_2025 already downloaded
+2026-04-07 15:42:34,510 [INFO] [SKIP] tva_2024 already downloaded
+2026-04-07 15:42:34,510 [INFO] [SKIP] cdpf_2025 already downloaded
+2026-04-07 15:42:34,510 [INFO] [SKIP] cdpf_2023 already downloaded
+2026-04-07 15:42:34,511 [INFO] [SKIP] nc_03_2025 already downloaded
+2026-04-07 15:42:38,892 [WARNING] [RETRY 1] nc_08_2025: 404 Client Error: Not Found for url: https://jibaya.tn/wp-content/uploads/2025/02/Note-Commune-N08-2025.pdf
+2026-04-07 15:42:40,894 [WARNING] [RETRY 2] nc_08_2025: HTTPSConnectionPool(host='jibaya.tn', port=443): Max retries exceeded with url: /wp-content/uploads/2025/02/Note-Commune-N08-2025.pdf (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)')))
+2026-04-07 15:42:44,832 [WARNING] [RETRY 3] nc_08_2025: 404 Client Error: Not Found for url: https://jibaya.tn/wp-content/uploads/2025/02/Note-Commune-N08-2025.pdf
+2026-04-07 15:42:44,832 [ERROR] [FAILED] nc_08_2025 — manual download required
+2026-04-07 15:42:44,836 [ERROR]   URL: https://jibaya.tn/wp-content/uploads/2025/02/Note-Commune-N08-2025.pdf
+2026-04-07 15:42:48,838 [INFO] [SKIP] nc_12_2024 already downloaded
+2026-04-07 15:42:48,840 [INFO] Download complete: 7/8 successful
+2026-04-07 15:42:48,840 [INFO] === STEP 2: EXTRACTING TEXT ===
+2026-04-07 15:42:48,840 [INFO] [SKIP] irpp_is_2024 already extracted
+2026-04-07 15:42:48,843 [INFO] [SKIP] irpp_is_2025 already extracted
+2026-04-07 15:42:48,845 [INFO] [SKIP] tva_2024 already extracted
+2026-04-07 15:42:48,849 [INFO] [SKIP] cdpf_2025 already extracted
+2026-04-07 15:42:48,851 [INFO] [SKIP] cdpf_2023 already extracted
+2026-04-07 15:42:48,855 [INFO] [SKIP] nc_03_2025 already extracted
+2026-04-07 15:42:48,856 [WARNING] [MISSING PDF] nc_08_2025 — skipping extraction
+2026-04-07 15:42:48,856 [INFO] [SKIP] nc_12_2024 already extracted
+2026-04-07 15:42:48,857 [INFO] === STEP 3: CHUNKING BY ARTICLE ===
+2026-04-07 15:42:48,883 [INFO] [CHUNKED] cdpf_2023: 467 chunks
+2026-04-07 15:42:48,905 [INFO] [CHUNKED] cdpf_2025: 473 chunks
+2026-04-07 15:42:48,933 [INFO] [CHUNKED] irpp_is_2024: 297 chunks
+2026-04-07 15:42:48,945 [INFO] [CHUNKED] irpp_is_2025: 137 chunks
+2026-04-07 15:42:48,946 [WARNING] No article structure in nc_03_2025, using paragraph chunking
+2026-04-07 15:42:48,946 [INFO] [CHUNKED] nc_03_2025: 0 chunks
+2026-04-07 15:42:48,947 [WARNING] No article structure in nc_12_2024, using paragraph chunking
+2026-04-07 15:42:48,948 [INFO] [CHUNKED] nc_12_2024: 0 chunks
+2026-04-07 15:42:48,978 [INFO] [CHUNKED] tva_2024: 265 chunks
+2026-04-07 15:42:49,011 [INFO] Total chunks: 1639
+2026-04-07 15:42:49,013 [INFO] === STEP 4: GENERATING RATES CONFIG ===
+2026-04-07 15:42:49,015 [INFO] Rates config saved: tunisia_tax_data\rates_config\tax_rates_2025.json
+2026-04-07 15:42:49,015 [INFO] === STEP 5: BUILDING VECTOR INDEX ===
+2026-04-07 15:42:49,745 [INFO] Indexing 1639 chunks...
+2026-04-07 15:42:53,608 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-04-07 15:42:56,112 [INFO] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-04-07 15:45:26,178 [INFO] Index built. Collections: ['TVA', 'CDPF', 'IRPP_IS', 'all']
+2026-04-07 15:45:26,181 [INFO] Pipeline complete.
+2026-04-07 15:45:45,454 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2026-04-07 15:53:38,379 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-07 15:53:40,402 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-04-07 15:53:42,915 [INFO] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-04-07 15:53:42,995 [INFO] Retriever initialized
+2026-04-07 15:53:44,239 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-07 15:53:44,683 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-07 15:53:44,684 [INFO] Retrying request to /openai/v1/chat/completions in 8.000000 seconds
+2026-04-07 15:53:53,404 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-07 15:53:53,830 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-07 15:53:53,831 [INFO] Retrying request to /openai/v1/chat/completions in 6.000000 seconds
+2026-04-07 15:54:01,601 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-07 15:54:01,602 [INFO] Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+2026-04-07 15:54:04,402 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-07 15:54:33,135 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-07 15:54:34,916 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-04-07 15:54:37,619 [INFO] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-04-07 15:54:37,698 [INFO] Retriever initialized
+2026-04-07 15:54:37,860 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-07 15:54:37,860 [INFO] Retrying request to /openai/v1/chat/completions in 9.000000 seconds
+2026-04-07 15:54:46,937 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-07 15:54:46,938 [INFO] Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+2026-04-07 15:54:49,196 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-09 16:11:51,436 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-09 16:11:59,065 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-04-09 16:12:00,210 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-09 16:12:00,255 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/modules.json "HTTP/1.1 200 OK"
+2026-04-09 16:12:00,428 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-09 16:12:00,429 [WARNING] Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-04-09 16:12:00,523 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-04-09 16:12:00,722 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-09 16:12:00,785 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-04-09 16:12:00,961 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-04-09 16:12:01,039 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/README.md "HTTP/1.1 200 OK"
+2026-04-09 16:12:01,245 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-09 16:12:01,304 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/modules.json "HTTP/1.1 200 OK"
+2026-04-09 16:12:01,496 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-09 16:12:01,545 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-04-09 16:12:01,724 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-04-09 16:12:01,886 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-09 16:12:01,934 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/config.json "HTTP/1.1 200 OK"
+2026-04-09 16:12:02,293 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-09 16:12:02,337 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/config.json "HTTP/1.1 200 OK"
+2026-04-09 16:12:02,494 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-09 16:12:02,542 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-04-09 16:12:02,713 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-04-09 16:12:02,861 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-04-09 16:12:03,113 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-09 16:12:03,155 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-04-09 16:12:03,344 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1 "HTTP/1.1 200 OK"
+2026-04-09 16:12:03,761 [INFO] Retriever initialized
+2026-04-09 16:12:05,644 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-09 16:12:07,299 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-09 16:12:07,299 [INFO] Retrying request to /openai/v1/chat/completions in 13.000000 seconds
+2026-04-09 16:12:21,670 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-09 16:12:22,799 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-09 16:12:22,801 [INFO] Retrying request to /openai/v1/chat/completions in 7.000000 seconds
+2026-04-09 16:12:31,266 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-09 16:16:01,180 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-09 16:16:03,616 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-04-09 16:16:05,165 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-09 16:16:05,203 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/modules.json "HTTP/1.1 200 OK"
+2026-04-09 16:16:05,355 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-09 16:16:05,356 [WARNING] Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-04-09 16:16:05,401 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-04-09 16:16:05,548 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-09 16:16:05,603 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-04-09 16:16:05,757 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-04-09 16:16:05,801 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/README.md "HTTP/1.1 200 OK"
+2026-04-09 16:16:05,956 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-09 16:16:06,004 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/modules.json "HTTP/1.1 200 OK"
+2026-04-09 16:16:06,150 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-09 16:16:06,197 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-04-09 16:16:06,349 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-04-09 16:16:06,494 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-09 16:16:06,535 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/config.json "HTTP/1.1 200 OK"
+2026-04-09 16:16:06,762 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-09 16:16:06,820 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/config.json "HTTP/1.1 200 OK"
+2026-04-09 16:16:06,996 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-09 16:16:07,061 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-04-09 16:16:07,208 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-04-09 16:16:07,362 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-04-09 16:16:07,557 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-09 16:16:07,610 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-04-09 16:16:07,763 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1 "HTTP/1.1 200 OK"
+2026-04-09 16:16:07,826 [INFO] Retriever initialized
+2026-04-09 16:16:09,486 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-09 16:16:10,298 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-09 16:16:10,299 [INFO] Retrying request to /openai/v1/chat/completions in 14.000000 seconds
+2026-04-09 16:16:25,334 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-09 16:16:26,098 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-09 16:16:26,099 [INFO] Retrying request to /openai/v1/chat/completions in 7.000000 seconds
+2026-04-09 16:16:34,886 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-09 16:34:45,661 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-09 16:34:48,156 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-04-09 16:34:49,221 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-09 16:34:49,266 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/modules.json "HTTP/1.1 200 OK"
+2026-04-09 16:34:49,419 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-09 16:34:49,420 [WARNING] Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-04-09 16:34:49,464 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-04-09 16:34:49,621 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-09 16:34:49,673 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-04-09 16:34:49,831 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-04-09 16:34:49,880 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/README.md "HTTP/1.1 200 OK"
+2026-04-09 16:34:50,044 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-09 16:34:50,090 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/modules.json "HTTP/1.1 200 OK"
+2026-04-09 16:34:50,246 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-09 16:34:50,308 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-04-09 16:34:50,478 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-04-09 16:34:50,644 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-09 16:34:50,689 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/config.json "HTTP/1.1 200 OK"
+2026-04-09 16:34:50,923 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-09 16:34:50,973 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/config.json "HTTP/1.1 200 OK"
+2026-04-09 16:34:51,136 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-09 16:34:51,178 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-04-09 16:34:51,332 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-04-09 16:34:51,506 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-04-09 16:34:51,693 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-09 16:34:51,740 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-04-09 16:34:51,894 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1 "HTTP/1.1 200 OK"
+2026-04-09 16:34:51,960 [INFO] Retriever initialized
+2026-04-09 16:34:53,717 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-09 16:34:54,706 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-09 16:34:54,707 [INFO] Retrying request to /openai/v1/chat/completions in 15.000000 seconds
+2026-04-09 16:35:11,596 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-09 16:35:12,553 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-09 16:35:12,554 [INFO] Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+2026-04-09 16:35:14,267 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-09 16:57:56,806 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-09 16:57:59,253 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-04-09 16:58:00,135 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-09 16:58:00,180 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/modules.json "HTTP/1.1 200 OK"
+2026-04-09 16:58:00,332 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-09 16:58:00,395 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-04-09 16:58:00,568 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-09 16:58:00,617 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-04-09 16:58:00,782 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-04-09 16:58:00,847 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/README.md "HTTP/1.1 200 OK"
+2026-04-09 16:58:00,996 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-09 16:58:01,104 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/modules.json "HTTP/1.1 200 OK"
+2026-04-09 16:58:01,274 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-09 16:58:01,322 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-04-09 16:58:01,487 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-04-09 16:58:01,488 [WARNING] Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-04-09 16:58:01,636 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-09 16:58:01,727 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/config.json "HTTP/1.1 200 OK"
+2026-04-09 16:58:01,949 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-09 16:58:02,001 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/config.json "HTTP/1.1 200 OK"
+2026-04-09 16:58:02,149 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-09 16:58:02,199 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-04-09 16:58:02,357 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-04-09 16:58:02,506 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-04-09 16:58:02,692 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-09 16:58:02,732 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-04-09 16:58:02,879 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1 "HTTP/1.1 200 OK"
+2026-04-09 16:58:02,953 [INFO] Retriever initialized
+2026-04-09 17:05:52,389 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-09 17:06:03,008 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-04-09 17:06:07,835 [INFO] Retriever initialized
+2026-04-09 17:06:09,507 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-09 17:06:10,754 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-09 17:06:10,755 [INFO] Retrying request to /openai/v1/chat/completions in 8.000000 seconds
+2026-04-09 17:06:19,377 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-09 17:06:19,378 [INFO] Retrying request to /openai/v1/chat/completions in 5.000000 seconds
+2026-04-09 17:06:27,480 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-09 17:06:28,762 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-09 17:06:28,762 [INFO] Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+2026-04-09 17:06:33,757 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-09 17:06:33,757 [INFO] Retrying request to /openai/v1/chat/completions in 20.000000 seconds
+2026-04-09 17:06:55,454 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-09 17:09:56,898 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-09 17:10:00,175 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-04-09 17:10:05,243 [INFO] Retriever initialized
+2026-04-09 17:10:07,619 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-09 17:10:08,927 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-09 17:10:08,928 [INFO] Retrying request to /openai/v1/chat/completions in 10.000000 seconds
+2026-04-09 17:10:19,433 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-09 17:10:19,433 [INFO] Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+2026-04-09 17:10:23,716 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-09 17:11:00,111 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-09 17:11:03,651 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-04-09 17:11:07,644 [INFO] Retriever initialized
+2026-04-09 17:11:08,844 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 413 Payload Too Large"
+2026-04-09 17:11:27,512 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-09 17:11:31,204 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-04-09 17:11:36,821 [INFO] Retriever initialized
+2026-04-09 17:11:38,296 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-09 17:11:54,119 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-09 17:11:57,673 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-04-09 17:12:01,998 [INFO] Retriever initialized
+2026-04-09 17:12:03,080 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-09 17:12:05,166 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-09 17:12:07,048 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-09 17:14:33,206 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-09 17:14:36,426 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-04-09 17:14:40,559 [INFO] Retriever initialized
+2026-04-09 17:14:42,051 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-09 17:14:42,904 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-09 17:14:42,905 [INFO] Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+2026-04-09 17:14:44,983 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-09 17:14:46,653 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-09 17:17:19,643 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-09 17:17:22,136 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-04-09 17:17:23,203 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-09 17:17:23,255 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/modules.json "HTTP/1.1 200 OK"
+2026-04-09 17:17:23,406 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-09 17:17:23,407 [WARNING] Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-04-09 17:17:23,449 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-04-09 17:17:23,618 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-09 17:17:23,756 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-04-09 17:17:23,951 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-04-09 17:17:24,020 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/README.md "HTTP/1.1 200 OK"
+2026-04-09 17:17:24,194 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-09 17:17:24,282 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/modules.json "HTTP/1.1 200 OK"
+2026-04-09 17:17:24,434 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-09 17:17:24,557 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-04-09 17:17:24,743 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-04-09 17:17:24,909 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-09 17:17:24,969 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/config.json "HTTP/1.1 200 OK"
+2026-04-09 17:17:25,366 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-09 17:17:25,574 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/config.json "HTTP/1.1 200 OK"
+2026-04-09 17:17:25,922 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-09 17:17:26,052 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-04-09 17:17:26,210 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-04-09 17:17:26,401 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-04-09 17:17:26,606 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-09 17:17:26,642 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-04-09 17:17:26,918 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1 "HTTP/1.1 200 OK"
+2026-04-09 17:17:26,991 [INFO] Retriever initialized
+2026-04-09 17:17:28,670 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-09 17:17:30,660 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-09 17:17:32,432 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-10 23:57:26,930 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-04-10 23:57:30,504 [INFO] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-04-10 23:57:30,838 [INFO] Retriever initialized
+2026-04-10 23:57:31,999 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-10 23:57:34,246 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-10 23:57:35,976 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-10 23:57:36,984 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-10 23:57:36,985 [INFO] Retrying request to /openai/v1/chat/completions in 7.000000 seconds
+2026-04-10 23:57:44,091 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-10 23:57:44,092 [INFO] Retrying request to /openai/v1/chat/completions in 6.000000 seconds
+2026-04-10 23:57:50,838 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-10 23:57:51,911 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-10 23:57:51,912 [INFO] Retrying request to /openai/v1/chat/completions in 28.000000 seconds
+2026-04-10 23:58:21,291 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-10 23:58:22,347 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-10 23:58:22,347 [INFO] Retrying request to /openai/v1/chat/completions in 12.000000 seconds
+2026-04-10 23:58:35,169 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-11 15:23:10,039 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-04-11 15:23:12,503 [INFO] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-04-11 15:23:12,662 [INFO] Retriever initialized
+2026-04-11 15:23:14,249 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-11 15:23:16,279 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-11 15:23:16,749 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-11 15:23:16,750 [INFO] Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+2026-04-11 15:23:21,722 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-11 15:23:22,496 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-11 15:23:22,497 [INFO] Retrying request to /openai/v1/chat/completions in 6.000000 seconds
+2026-04-11 15:23:29,268 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-11 15:23:29,728 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-11 15:23:29,728 [INFO] Retrying request to /openai/v1/chat/completions in 30.000000 seconds
+2026-04-11 15:23:59,827 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-11 15:23:59,828 [INFO] Retrying request to /openai/v1/chat/completions in 5.000000 seconds
+2026-04-11 15:24:06,262 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-11 15:24:06,975 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-11 15:24:06,975 [INFO] Retrying request to /openai/v1/chat/completions in 18.000000 seconds
+2026-04-11 15:24:25,805 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-11 15:30:59,389 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-04-11 15:31:01,832 [INFO] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-04-11 15:31:02,000 [INFO] Retriever initialized
+2026-04-11 15:31:03,578 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-11 15:31:05,277 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-11 15:31:06,768 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-11 15:31:07,224 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-11 15:31:07,224 [INFO] Retrying request to /openai/v1/chat/completions in 12.000000 seconds
+2026-04-11 15:31:19,902 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-11 15:31:20,357 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-11 15:31:20,357 [INFO] Retrying request to /openai/v1/chat/completions in 34.000000 seconds
+2026-04-11 15:31:55,606 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-11 15:31:56,026 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-11 15:31:56,027 [INFO] Retrying request to /openai/v1/chat/completions in 14.000000 seconds
+2026-04-11 15:32:10,120 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-11 15:32:10,121 [INFO] Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+2026-04-11 15:32:12,870 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-11 16:01:57,165 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-04-11 16:01:59,491 [INFO] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-04-11 16:01:59,613 [INFO] Retriever initialized
+2026-04-11 16:02:01,131 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-11 16:02:03,956 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-11 16:02:05,466 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-11 16:02:06,950 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-11 16:02:06,950 [INFO] Retrying request to /openai/v1/chat/completions in 14.000000 seconds
+2026-04-11 16:02:22,244 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-11 16:02:23,032 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-11 16:02:23,033 [INFO] Retrying request to /openai/v1/chat/completions in 26.000000 seconds
+2026-04-11 16:02:51,537 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-11 16:02:52,679 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-11 16:02:52,680 [INFO] Retrying request to /openai/v1/chat/completions in 14.000000 seconds
+2026-04-11 16:03:07,462 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 14:58:22,780 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-04-12 14:58:25,984 [INFO] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-04-12 14:58:26,310 [INFO] Retriever initialized
+2026-04-12 14:58:28,151 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 15:02:38,081 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-04-12 15:02:40,870 [INFO] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-04-12 15:02:41,030 [INFO] Retriever initialized
+2026-04-12 15:02:42,125 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 15:02:44,791 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 15:02:45,668 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-12 15:02:45,669 [INFO] Retrying request to /openai/v1/chat/completions in 8.000000 seconds
+2026-04-12 15:02:53,779 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-12 15:02:53,780 [INFO] Retrying request to /openai/v1/chat/completions in 5.000000 seconds
+2026-04-12 15:02:58,882 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-12 15:06:41,821 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-04-12 15:06:44,587 [INFO] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-04-12 15:06:44,765 [INFO] Retriever initialized
+2026-04-12 15:06:45,999 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 15:06:47,902 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 15:06:50,640 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 15:06:52,321 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 15:06:53,847 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 15:06:56,405 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 15:09:48,078 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 15:09:50,016 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 15:09:52,084 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 15:09:54,215 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 15:09:56,355 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 15:09:57,315 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-12 15:09:57,316 [INFO] Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+2026-04-12 15:10:00,845 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 15:10:01,784 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-12 15:10:01,785 [INFO] Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+2026-04-12 15:10:07,229 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 15:10:08,127 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-12 15:10:08,128 [INFO] Retrying request to /openai/v1/chat/completions in 15.000000 seconds
+2026-04-12 15:10:23,239 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-12 15:10:23,240 [INFO] Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+2026-04-12 15:10:25,762 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 15:10:26,616 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-12 15:10:26,616 [INFO] Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+2026-04-12 15:10:31,846 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 15:10:32,704 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-12 15:10:32,705 [INFO] Retrying request to /openai/v1/chat/completions in 16.000000 seconds
+2026-04-12 15:10:50,134 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 15:10:51,047 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-12 15:10:51,048 [INFO] Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+2026-04-12 15:10:54,124 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-12 15:10:54,124 [INFO] Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+2026-04-12 15:10:56,633 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 15:10:57,513 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-12 15:10:57,514 [INFO] Retrying request to /openai/v1/chat/completions in 16.000000 seconds
+2026-04-12 15:11:14,499 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 15:11:15,549 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-12 15:11:15,550 [INFO] Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+2026-04-12 15:11:19,619 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 15:11:20,592 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-12 15:11:20,593 [INFO] Retrying request to /openai/v1/chat/completions in 13.000000 seconds
+2026-04-12 15:11:33,699 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-12 15:11:33,700 [INFO] Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+2026-04-12 15:11:37,027 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 15:11:37,912 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-12 15:11:37,913 [INFO] Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+2026-04-12 15:11:40,985 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-12 15:11:40,986 [INFO] Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+2026-04-12 15:11:43,577 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 15:11:44,593 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-12 15:11:44,594 [INFO] Retrying request to /openai/v1/chat/completions in 16.000000 seconds
+2026-04-12 15:12:01,974 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 15:12:02,850 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-12 15:12:02,851 [INFO] Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+2026-04-12 15:12:08,146 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 15:12:09,104 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-12 15:12:09,105 [INFO] Retrying request to /openai/v1/chat/completions in 16.000000 seconds
+2026-04-12 15:12:26,554 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 15:12:27,427 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-12 15:12:27,428 [INFO] Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+2026-04-12 15:12:32,330 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 15:12:33,194 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-12 15:12:33,195 [INFO] Retrying request to /openai/v1/chat/completions in 15.000000 seconds
+2026-04-12 15:12:49,412 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 15:12:50,422 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-12 15:12:50,423 [INFO] Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+2026-04-12 15:12:55,696 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 15:12:56,555 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-12 15:12:56,556 [INFO] Retrying request to /openai/v1/chat/completions in 17.000000 seconds
+2026-04-12 15:13:14,661 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 15:13:15,664 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-12 15:13:15,665 [INFO] Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+2026-04-12 15:13:19,575 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 15:13:20,525 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-12 15:13:20,526 [INFO] Retrying request to /openai/v1/chat/completions in 15.000000 seconds
+2026-04-12 15:13:36,552 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 15:13:37,562 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-12 15:13:37,563 [INFO] Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+2026-04-12 15:13:41,513 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 15:13:42,411 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-12 15:13:42,411 [INFO] Retrying request to /openai/v1/chat/completions in 16.000000 seconds
+2026-04-12 15:24:22,528 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-04-12 15:24:25,606 [INFO] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-04-12 15:24:25,777 [INFO] Retriever initialized
+2026-04-12 15:24:25,982 [INFO] AFC is enabled with max remote calls: 10.
+2026-04-12 15:24:26,136 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-12 15:24:26,138 [INFO] Retrying google.genai._api_client.BaseApiClient._request_once in 1.89 seconds as it raised ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\nPlease retry in 34.1722403s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash', 'location': 'global'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash', 'location': 'global'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '34s'}]}}.
+2026-04-12 15:24:28,120 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-12 15:24:28,121 [INFO] Retrying google.genai._api_client.BaseApiClient._request_once in 2.84 seconds as it raised ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\nPlease retry in 32.186578126s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash', 'location': 'global'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash', 'location': 'global'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '32s'}]}}.
+2026-04-12 15:24:31,057 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-12 15:24:31,058 [INFO] Retrying google.genai._api_client.BaseApiClient._request_once in 4.62 seconds as it raised ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\nPlease retry in 29.25001082s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash', 'location': 'global'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '29s'}]}}.
+2026-04-12 15:24:35,766 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-12 15:24:35,770 [INFO] Retrying google.genai._api_client.BaseApiClient._request_once in 8.44 seconds as it raised ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\nPlease retry in 24.541495328s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash', 'location': 'global'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '24s'}]}}.
+2026-04-12 15:24:44,448 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-12 15:24:44,449 [INFO] Retrying google.genai._api_client.BaseApiClient._request_once in 16.5 seconds as it raised ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\nPlease retry in 15.860857625s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '15s'}]}}.
+2026-04-12 15:25:01,118 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-12 15:28:41,651 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-04-12 15:28:44,530 [INFO] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-04-12 15:28:44,707 [INFO] Retriever initialized
+2026-04-12 15:28:44,897 [INFO] AFC is enabled with max remote calls: 10.
+2026-04-12 15:28:45,134 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-12 15:28:45,136 [INFO] Retrying google.genai._api_client.BaseApiClient._request_once in 1.02 seconds as it raised ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\nPlease retry in 15.167090932s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '15s'}]}}.
+2026-04-12 15:28:46,247 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-12 15:28:46,248 [INFO] Retrying google.genai._api_client.BaseApiClient._request_once in 2.25 seconds as it raised ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\nPlease retry in 14.055941491s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash', 'location': 'global'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash', 'location': 'global'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '14s'}]}}.
+2026-04-12 15:28:48,595 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-12 15:28:48,596 [INFO] Retrying google.genai._api_client.BaseApiClient._request_once in 4.22 seconds as it raised ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\nPlease retry in 11.705157157s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash', 'location': 'global'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash', 'location': 'global'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash', 'location': 'global'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '11s'}]}}.
+2026-04-12 15:28:52,902 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-12 15:28:52,903 [INFO] Retrying google.genai._api_client.BaseApiClient._request_once in 8.21 seconds as it raised ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\nPlease retry in 7.397976149s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '7s'}]}}.
+2026-04-12 15:29:01,362 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-12 15:29:01,363 [INFO] Retrying google.genai._api_client.BaseApiClient._request_once in 16.3 seconds as it raised ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\nPlease retry in 58.939398697s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '58s'}]}}.
+2026-04-12 15:29:17,754 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-12 15:30:15,573 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-04-12 15:30:18,352 [INFO] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-04-12 15:30:18,526 [INFO] Retriever initialized
+2026-04-12 15:30:18,765 [INFO] AFC is enabled with max remote calls: 10.
+2026-04-12 15:30:18,913 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2026-04-12 15:35:23,958 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-04-12 15:35:26,919 [INFO] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-04-12 15:35:27,072 [INFO] Retriever initialized
+2026-04-12 15:35:28,724 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 15:35:30,563 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 15:35:32,625 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 15:35:34,621 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 15:35:36,598 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 15:35:37,474 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-12 15:35:37,475 [INFO] Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+2026-04-12 15:35:41,601 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 15:35:42,406 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-12 15:35:42,407 [INFO] Retrying request to /openai/v1/chat/completions in 7.000000 seconds
+2026-04-12 15:35:51,275 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 15:35:52,153 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-12 15:35:52,153 [INFO] Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+2026-04-12 15:35:57,526 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 15:35:58,403 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-12 15:35:58,404 [INFO] Retrying request to /openai/v1/chat/completions in 16.000000 seconds
+2026-04-12 15:36:15,303 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 15:36:16,244 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-12 15:36:16,245 [INFO] Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+2026-04-12 15:36:21,410 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 15:36:22,421 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-12 15:36:22,422 [INFO] Retrying request to /openai/v1/chat/completions in 17.000000 seconds
+2026-04-12 15:39:59,243 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-04-12 15:40:02,408 [INFO] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-04-12 15:40:02,552 [INFO] Retriever initialized
+2026-04-12 15:40:03,962 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 15:40:06,055 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 15:40:08,191 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 15:40:10,182 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 15:40:12,214 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 15:40:14,338 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 15:40:16,388 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 15:40:18,172 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 15:40:20,179 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-12 15:40:21,049 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-13 21:45:58,858 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-04-13 21:45:59,381 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-13 21:45:59,428 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/modules.json "HTTP/1.1 200 OK"
+2026-04-13 21:45:59,579 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-13 21:45:59,624 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-04-13 21:45:59,768 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-13 21:45:59,812 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-04-13 21:45:59,952 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-04-13 21:45:59,953 [WARNING] Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-04-13 21:45:59,997 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/README.md "HTTP/1.1 200 OK"
+2026-04-13 21:46:00,154 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-13 21:46:00,196 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/modules.json "HTTP/1.1 200 OK"
+2026-04-13 21:46:00,347 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-13 21:46:00,391 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-04-13 21:46:00,534 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-04-13 21:46:00,683 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-13 21:46:00,726 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/config.json "HTTP/1.1 200 OK"
+2026-04-13 21:46:01,022 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-13 21:46:01,065 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/config.json "HTTP/1.1 200 OK"
+2026-04-13 21:46:01,204 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-13 21:46:01,248 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-04-13 21:46:01,399 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-04-13 21:46:01,540 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-04-13 21:46:01,762 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-13 21:46:01,807 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-04-13 21:46:01,956 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1 "HTTP/1.1 200 OK"
+2026-04-13 21:46:02,456 [INFO] Retriever initialized
+2026-04-13 21:46:03,913 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-13 21:46:04,725 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-13 21:46:06,066 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-13 21:46:37,410 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-13 21:46:38,702 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-13 21:46:40,222 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-13 21:47:10,964 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-13 21:47:11,569 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-13 21:47:12,547 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-13 21:47:44,033 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-13 21:47:44,811 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-13 21:47:45,961 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-13 21:48:17,019 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-13 21:48:17,764 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-13 21:48:19,094 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-13 22:03:54,682 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-04-13 22:03:55,068 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-13 22:03:55,100 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/modules.json "HTTP/1.1 200 OK"
+2026-04-13 22:03:55,243 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-13 22:03:55,275 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-04-13 22:03:55,418 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-13 22:03:55,448 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-04-13 22:03:55,592 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-04-13 22:03:55,623 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/README.md "HTTP/1.1 200 OK"
+2026-04-13 22:03:55,766 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-13 22:03:55,796 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/modules.json "HTTP/1.1 200 OK"
+2026-04-13 22:03:55,937 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-13 22:03:55,966 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-04-13 22:03:56,110 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-04-13 22:03:56,253 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-13 22:03:56,285 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/config.json "HTTP/1.1 200 OK"
+2026-04-13 22:03:56,509 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-13 22:03:56,511 [WARNING] Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-04-13 22:03:56,541 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/config.json "HTTP/1.1 200 OK"
+2026-04-13 22:03:56,699 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-13 22:03:56,730 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-04-13 22:03:56,877 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-04-13 22:03:57,025 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-04-13 22:03:57,212 [INFO] HTTP Request: HEAD https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-13 22:03:57,243 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/b207367332321f8e44f96e224ef15bc607f4dbf0/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-04-13 22:03:57,389 [INFO] HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1 "HTTP/1.1 200 OK"
+2026-04-13 22:03:57,458 [INFO] Retriever initialized
+2026-04-13 22:03:58,156 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-13 22:03:58,865 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-13 22:03:59,843 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-13 22:04:00,750 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-13 22:04:01,647 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-13 22:04:02,851 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-13 22:33:59,237 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-04-13 22:34:03,051 [INFO] Retriever initialized
+2026-04-13 22:34:03,909 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-13 22:34:04,867 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-13 22:34:06,031 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-13 23:10:26,128 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-04-13 23:10:29,262 [INFO] Retriever initialized
+2026-04-13 23:10:30,056 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-13 23:10:30,953 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-13 23:10:32,172 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-13 23:13:24,883 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-13 23:13:26,088 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-13 23:13:27,679 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-14 15:19:27,937 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-04-14 15:19:31,059 [INFO] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-04-14 15:19:31,322 [INFO] Retriever initialized
+2026-04-14 15:19:32,344 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-14 15:19:33,724 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-14 15:19:35,384 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-14 16:18:13,717 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-04-14 16:18:16,719 [INFO] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-04-14 16:18:16,961 [INFO] Retriever initialized
+2026-04-14 16:18:18,235 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-14 16:18:19,525 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-14 16:18:21,181 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-14 16:22:41,246 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-04-14 16:22:43,968 [INFO] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-04-14 16:22:44,142 [INFO] Retriever initialized
+2026-04-14 16:22:45,238 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-14 16:22:46,669 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-14 16:22:48,298 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-14 16:50:10,678 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-04-14 16:50:13,443 [INFO] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-04-14 16:50:13,651 [INFO] Retriever initialized
+2026-04-14 16:50:14,746 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-14 16:50:16,249 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-14 16:50:17,833 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-14 16:51:17,499 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-14 16:51:18,815 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-14 16:51:20,260 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-14 17:27:14,798 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-04-14 17:27:17,897 [INFO] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-04-14 17:27:18,178 [INFO] Retriever initialized
+2026-04-14 17:27:19,470 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-14 17:27:21,089 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-14 17:27:23,031 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-14 19:25:57,934 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-14 19:25:59,855 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-14 19:26:01,898 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-14 19:37:51,951 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-04-14 19:37:54,806 [INFO] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-04-14 19:37:54,958 [INFO] Retriever initialized
+2026-04-14 19:37:55,876 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-14 19:37:57,455 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-14 19:37:59,174 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-14 19:42:55,449 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-04-14 19:42:58,095 [INFO] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-04-14 19:42:58,276 [INFO] Retriever initialized
+2026-04-14 19:42:59,222 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-14 19:43:00,398 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-14 19:43:02,531 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-14 20:02:52,194 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-04-14 20:02:55,106 [INFO] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-04-14 20:02:55,258 [INFO] Retriever initialized
+2026-04-14 20:02:56,300 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-14 20:02:57,421 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-14 20:02:59,273 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-14 20:03:38,155 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-14 20:03:39,565 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-14 20:03:41,429 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+<<<<<<< HEAD
+2026-05-04 19:11:56,793 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-05-04 19:12:01,488 [INFO] Retriever initialized
+2026-05-04 19:12:02,423 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-04 19:12:03,877 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-04 19:12:06,055 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+=======
+2026-04-14 22:54:00,108 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-04-14 22:54:03,056 [INFO] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-04-14 22:54:03,259 [INFO] Retriever initialized
+2026-04-14 22:54:04,639 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-14 22:54:05,649 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-14 22:54:07,586 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-14 23:46:11,975 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-04-14 23:46:15,500 [INFO] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-04-14 23:46:15,778 [INFO] Retriever initialized
+2026-04-14 23:46:17,232 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-14 23:46:18,429 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-14 23:46:20,578 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-03 19:56:49,546 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-05-03 19:56:56,868 [INFO] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-05-03 19:56:57,647 [INFO] Retriever initialized
+2026-05-03 19:56:58,859 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-03 19:57:00,512 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-03 19:57:02,898 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-03 20:02:34,057 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-03 20:02:35,387 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-03 20:02:37,540 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-03 20:07:04,201 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-03 20:07:05,663 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-03 20:07:07,769 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-03 20:16:52,170 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-05-03 20:16:57,571 [INFO] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-05-03 20:16:57,754 [INFO] Retriever initialized
+2026-05-03 20:16:59,061 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-03 20:17:00,857 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-03 20:17:02,902 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-04 13:01:38,729 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-05-04 13:01:41,283 [INFO] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-05-04 13:01:41,481 [INFO] Retriever initialized
+2026-05-04 13:01:42,453 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-04 13:01:43,546 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-04 13:01:45,096 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+>>>>>>> 25a4aed61439a15cf1909b3cf4ba8732fd3df1c3
+2026-05-04 19:35:43,347 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-05-04 19:35:47,351 [INFO] Retriever initialized
+2026-05-04 19:35:47,995 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-04 19:36:03,965 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-04 19:36:05,085 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-04 19:36:06,855 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-04 21:36:15,297 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-05-04 21:36:18,703 [INFO] Retriever initialized
+2026-05-04 21:36:19,763 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-04 21:36:20,628 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-04 21:36:22,084 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-04 21:37:48,449 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-05-04 21:37:51,803 [INFO] Retriever initialized
+2026-05-04 21:37:52,638 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-04 21:38:17,746 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-05-04 21:38:20,709 [INFO] Retriever initialized
+2026-05-04 21:38:21,461 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-04 21:38:22,377 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-04 21:38:23,839 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-04 21:44:28,254 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-05-04 21:44:31,909 [INFO] Retriever initialized
+2026-05-04 21:44:32,788 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-04 21:44:33,842 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-04 21:44:35,229 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-04 21:50:31,741 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-05-04 21:50:35,518 [INFO] Retriever initialized
+2026-05-04 21:50:36,312 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-04 21:50:37,747 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-04 21:50:39,623 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-04 21:58:05,066 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-04 21:58:06,438 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-04 21:58:08,317 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-04 22:05:04,853 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-04 22:05:05,359 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-04 22:05:06,807 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-04 22:05:08,777 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-04 22:05:27,813 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-04 22:05:29,068 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-04 22:05:30,937 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-04 22:13:32,061 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-05-04 22:13:35,735 [INFO] Retriever initialized
+2026-05-04 22:13:36,665 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-04 22:13:38,066 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-04 22:13:39,940 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-04 22:14:42,199 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-04 22:14:43,431 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-04 22:14:45,521 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-04 22:14:59,942 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-04 22:15:01,296 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-04 22:15:03,101 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-04 22:22:54,907 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-04 22:22:56,316 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-04 22:22:58,148 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 14:11:24,955 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-05-05 14:11:28,987 [INFO] Retriever initialized
+2026-05-05 14:11:30,622 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 14:11:31,869 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 14:11:33,684 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 15:32:31,197 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-05-05 15:32:35,960 [INFO] Retriever initialized
+2026-05-05 15:32:37,053 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 15:32:38,993 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 15:32:41,417 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 15:54:01,685 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-05-05 15:54:06,535 [INFO] Retriever initialized
+2026-05-05 16:19:52,827 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-05-05 16:19:57,532 [INFO] Retriever initialized
+2026-05-05 16:23:00,502 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-05-05 16:23:04,062 [INFO] Retriever initialized
+2026-05-05 19:08:24,743 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-05-05 19:08:31,261 [INFO] Retriever initialized
+2026-05-05 19:08:32,471 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 19:08:34,569 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 19:08:36,929 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 19:10:24,695 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-05-05 19:10:29,358 [INFO] Retriever initialized
+2026-05-05 19:13:52,882 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-05-05 19:13:57,524 [INFO] Retriever initialized
+2026-05-05 19:13:58,434 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 21:33:03,771 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-05-05 21:33:09,643 [INFO] Retriever initialized
+2026-05-05 21:33:11,000 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 21:33:13,033 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 21:33:15,498 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 21:39:16,268 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-05-05 21:39:21,854 [INFO] Retriever initialized
+2026-05-05 21:39:24,358 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 21:39:26,287 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 21:39:29,017 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 21:47:52,871 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-05-05 21:47:57,470 [INFO] Retriever initialized
+2026-05-05 21:47:58,564 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 21:48:00,493 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 21:48:03,133 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 21:48:54,730 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 21:48:56,615 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 21:48:59,025 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 21:56:51,035 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-05-05 21:56:55,643 [INFO] Retriever initialized
+2026-05-05 21:56:56,554 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 21:56:58,309 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 21:57:00,949 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 22:13:38,546 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-05-05 22:13:41,823 [INFO] Retriever initialized
+2026-05-05 22:13:42,638 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 22:13:43,460 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 22:13:45,047 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 22:14:44,392 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-05-05 22:14:47,875 [INFO] Retriever initialized
+2026-05-05 22:14:48,642 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 22:14:49,711 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 22:14:51,587 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-09 10:01:59,528 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-05-09 10:02:04,168 [INFO] Retriever initialized
+2026-05-09 10:02:05,508 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-09 10:02:07,209 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-09 10:02:08,963 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-09 10:04:33,020 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-05-09 10:04:36,593 [INFO] Retriever initialized
+2026-05-09 10:04:37,500 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-09 10:04:39,017 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-09 10:04:39,824 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-05-09 10:04:39,826 [INFO] Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+2026-05-09 10:04:45,074 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-09 10:09:09,728 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-09 10:09:12,164 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-09 10:09:12,973 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-05-09 10:09:12,974 [INFO] Retrying request to /openai/v1/chat/completions in 7.000000 seconds
+2026-05-09 10:09:21,165 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-09 10:09:31,877 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-05-09 10:09:31,878 [INFO] Retrying request to /openai/v1/chat/completions in 7.000000 seconds
+2026-05-09 10:09:39,594 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-09 10:09:40,414 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-05-09 10:09:40,415 [INFO] Retrying request to /openai/v1/chat/completions in 35.000000 seconds
+2026-05-09 10:10:16,300 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-09 10:10:17,154 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-05-09 10:10:17,155 [INFO] Retrying request to /openai/v1/chat/completions in 14.000000 seconds
+2026-05-09 10:10:32,377 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-09 10:24:27,171 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-05-09 10:24:30,308 [INFO] Retriever initialized
+2026-05-09 10:24:31,082 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-09 10:24:32,346 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-09 10:24:34,267 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-09 10:26:34,211 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-05-09 10:26:37,986 [INFO] Retriever initialized
+2026-05-09 10:26:39,162 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-09 10:26:40,080 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-09 10:26:40,530 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-05-09 10:26:40,531 [INFO] Retrying request to /openai/v1/chat/completions in 8.000000 seconds
+2026-05-09 10:26:49,935 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-09 10:36:42,950 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-09 10:36:44,531 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-09 10:36:46,596 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-09 10:39:22,779 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-09 10:39:24,486 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-09 10:39:25,289 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-05-09 10:39:25,290 [INFO] Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+2026-05-09 10:39:30,312 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-09 10:52:29,624 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-05-09 10:52:33,480 [INFO] Retriever initialized
+2026-05-09 10:52:34,183 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-09 10:52:35,833 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-09 10:52:37,613 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-09 10:53:49,824 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-09 10:53:51,417 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-09 10:53:53,219 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 14:00:47,664 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-05-10 14:00:51,584 [INFO] Retriever initialized
+2026-05-10 14:00:53,171 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 14:00:54,434 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 14:00:54,893 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-05-10 14:00:54,894 [INFO] Retrying request to /openai/v1/chat/completions in 7.000000 seconds
+2026-05-10 14:01:03,176 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 14:25:46,747 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-05-10 14:25:49,845 [INFO] Retriever initialized
+2026-05-10 14:25:51,133 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 14:25:52,748 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 14:25:53,211 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-05-10 14:25:53,212 [INFO] Retrying request to /openai/v1/chat/completions in 13.000000 seconds
+2026-05-10 14:26:06,290 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-05-10 14:26:06,290 [INFO] Retrying request to /openai/v1/chat/completions in 7.000000 seconds
+2026-05-10 14:26:14,609 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 14:31:23,134 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-05-10 14:31:26,689 [INFO] Retriever initialized
+2026-05-10 14:31:27,898 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 14:31:29,877 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-10 14:31:30,695 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-05-10 14:31:30,696 [INFO] Retrying request to /openai/v1/chat/completions in 23.000000 seconds
+2026-05-10 14:31:55,067 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-24 13:26:02,714 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-05-24 13:26:08,956 [INFO] Retriever initialized
+2026-05-24 13:26:12,636 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-24 13:26:14,827 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-24 13:26:15,992 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-05-24 13:26:15,993 [INFO] Retrying request to /openai/v1/chat/completions in 18.000000 seconds
+2026-05-24 13:26:36,212 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-25 14:08:07,944 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-05-25 14:08:18,962 [INFO] Retriever initialized
+2026-05-25 14:08:22,045 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-25 14:08:25,598 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-25 14:08:27,981 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-05-25 14:08:27,982 [INFO] Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+2026-05-25 14:08:32,207 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-05-25 14:08:32,208 [INFO] Retrying request to /openai/v1/chat/completions in 5.000000 seconds
+2026-05-25 14:08:37,940 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-05-25 14:10:47,149 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-05-25 14:11:00,438 [INFO] Retriever initialized
+2026-05-25 14:11:02,603 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-25 14:11:05,649 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-25 14:11:08,380 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-05-25 14:11:08,382 [INFO] Retrying request to /openai/v1/chat/completions in 24.000000 seconds
+2026-05-25 14:11:35,284 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-25 16:18:21,052 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-05-25 16:18:27,767 [INFO] Retriever initialized
+2026-05-25 16:24:23,779 [INFO] Load pretrained SentenceTransformer: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+2026-05-25 16:24:28,874 [INFO] Retriever initialized
+2026-05-25 16:24:31,108 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-25 16:24:33,500 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-25 16:24:35,007 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-05-25 16:24:35,008 [INFO] Retrying request to /openai/v1/chat/completions in 15.000000 seconds
+2026-05-25 16:24:50,784 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-05-25 16:24:50,785 [INFO] Retrying request to /openai/v1/chat/completions in 6.000000 seconds
+2026-05-25 16:24:59,527 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"

@@ -1,0 +1,15 @@
+{
+  "downloaded_at": "2026-04-07T15:42:48.838639",
+  "results": {
+    "irpp_is_2024": "tunisia_tax_data\\raw_pdfs\\irpp_is_2024.pdf",
+    "irpp_is_2025": "tunisia_tax_data\\raw_pdfs\\irpp_is_2025.pdf",
+    "tva_2024": "tunisia_tax_data\\raw_pdfs\\tva_2024.pdf",
+    "cdpf_2025": "tunisia_tax_data\\raw_pdfs\\cdpf_2025.pdf",
+    "cdpf_2023": "tunisia_tax_data\\raw_pdfs\\cdpf_2023.pdf",
+    "nc_03_2025": "tunisia_tax_data\\raw_pdfs\\nc_03_2025.pdf",
+    "nc_12_2024": "tunisia_tax_data\\raw_pdfs\\nc_12_2024.pdf"
+  },
+  "failed": [
+    "nc_08_2025"
+  ]
+}

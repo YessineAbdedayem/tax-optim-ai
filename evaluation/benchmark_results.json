@@ -1,0 +1,37 @@
+{
+  "timestamp": "2026-05-09T10:51:37.739446",
+  "total": 15,
+  "passed": 11,
+  "failed": 4,
+  "accuracy_pct": 73.3,
+  "failures": [
+    {
+      "id": "EMP_005",
+      "desc": "Salarié célibataire, 60,000 DT (haut revenu)",
+      "expected": 13617.2,
+      "got": 13982.96,
+      "diff": 365.76
+    },
+    {
+      "id": "EMP_007",
+      "desc": "Salarié marié 4 enfants, 48,000 DT",
+      "expected": 9765.69,
+      "got": 9785.3,
+      "diff": 19.61
+    },
+    {
+      "id": "EMP_010",
+      "desc": "Salarié célibataire, 120,000 DT (très haut)",
+      "expected": 34210.64,
+      "got": 37162.16,
+      "diff": 2951.52
+    },
+    {
+      "id": "FRL_003",
+      "desc": "Freelancer marié 2 enfants, 60,000 DT",
+      "expected": 12412.42,
+      "got": 12672.64,
+      "diff": 260.22
+    }
+  ]
+}

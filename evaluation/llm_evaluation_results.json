@@ -1,0 +1,195 @@
+{
+  "timestamp": "2026-04-13T21:48:19.099878",
+  "system": "Tunisian Tax Optimization Multi-Agent",
+  "total_cases": 5,
+  "successful": 5,
+  "failed": 0,
+  "average_score": 98.0,
+  "metric_averages": {
+    "factual_accuracy": 100.0,
+    "hallucination": 100.0,
+    "strategy_relevance": 100.0,
+    "report_coherence": 92.0
+  },
+  "cases": [
+    {
+      "case_id": "EVAL_001",
+      "overall_score": 100.0,
+      "metrics": {
+        "factual_accuracy": {
+          "score": 100,
+          "issues": [],
+          "ground_truth_irpp": 4778.8,
+          "simulation_irpp": 4778.8
+        },
+        "hallucination": {
+          "score": 100,
+          "hallucination_rate": 0.0,
+          "hallucinations_found": 0,
+          "total_checks": 15,
+          "issues": []
+        },
+        "strategy_relevance": {
+          "score": 100,
+          "strategy_count": 3,
+          "issues": []
+        },
+        "report_coherence": {
+          "score": 100,
+          "report_length": 3172,
+          "issues": []
+        }
+      },
+      "ground_truth": {
+        "irpp_annual": 4778.8,
+        "cnss_annual": 2904.0,
+        "net_monthly": 1859.77
+      },
+      "status": "OK"
+    },
+    {
+      "case_id": "EVAL_002",
+      "overall_score": 95.0,
+      "metrics": {
+        "factual_accuracy": {
+          "score": 100,
+          "issues": [],
+          "ground_truth_irpp": 5861.32,
+          "simulation_irpp": 5861.32
+        },
+        "hallucination": {
+          "score": 100,
+          "hallucination_rate": 0.0,
+          "hallucinations_found": 0,
+          "total_checks": 12,
+          "issues": []
+        },
+        "strategy_relevance": {
+          "score": 100,
+          "strategy_count": 4,
+          "issues": []
+        },
+        "report_coherence": {
+          "score": 80,
+          "report_length": 2417,
+          "issues": [
+            "Simulation savings 4781.32 DT not found in report"
+          ]
+        }
+      },
+      "ground_truth": {
+        "irpp_annual": 5861.32,
+        "cnss_annual": 5295.6,
+        "net_monthly": 2070.26
+      },
+      "status": "OK"
+    },
+    {
+      "case_id": "EVAL_003",
+      "overall_score": 100.0,
+      "metrics": {
+        "factual_accuracy": {
+          "score": 100,
+          "issues": [],
+          "ground_truth_irpp": 8937.52,
+          "simulation_irpp": 8937.52
+        },
+        "hallucination": {
+          "score": 100,
+          "hallucination_rate": 0.0,
+          "hallucinations_found": 0,
+          "total_checks": 11,
+          "issues": []
+        },
+        "strategy_relevance": {
+          "score": 100,
+          "strategy_count": 2,
+          "issues": []
+        },
+        "report_coherence": {
+          "score": 100,
+          "report_length": 2485,
+          "issues": []
+        }
+      },
+      "ground_truth": {
+        "irpp_annual": 8937.52,
+        "cnss_annual": 4356.0,
+        "net_monthly": 2642.21
+      },
+      "status": "OK"
+    },
+    {
+      "case_id": "EVAL_004",
+      "overall_score": 95.0,
+      "metrics": {
+        "factual_accuracy": {
+          "score": 100,
+          "issues": [],
+          "ground_truth_irpp": 12412.42,
+          "simulation_irpp": 12412.42
+        },
+        "hallucination": {
+          "score": 100,
+          "hallucination_rate": 0.0,
+          "hallucinations_found": 0,
+          "total_checks": 12,
+          "issues": []
+        },
+        "strategy_relevance": {
+          "score": 100,
+          "strategy_count": 4,
+          "issues": []
+        },
+        "report_coherence": {
+          "score": 80,
+          "report_length": 2615,
+          "issues": [
+            "Simulation savings 10612.42 DT not found in report"
+          ]
+        }
+      },
+      "ground_truth": {
+        "irpp_annual": 12412.42,
+        "cnss_annual": 8826.0,
+        "net_monthly": 3230.13
+      },
+      "status": "OK"
+    },
+    {
+      "case_id": "EVAL_005",
+      "overall_score": 100.0,
+      "metrics": {
+        "factual_accuracy": {
+          "score": 100,
+          "issues": [],
+          "ground_truth_irpp": 13617.2,
+          "simulation_irpp": 13617.2
+        },
+        "hallucination": {
+          "score": 100,
+          "hallucination_rate": 0.0,
+          "hallucinations_found": 0,
+          "total_checks": 13,
+          "issues": []
+        },
+        "strategy_relevance": {
+          "score": 100,
+          "strategy_count": 3,
+          "issues": []
+        },
+        "report_coherence": {
+          "score": 100,
+          "report_length": 2832,
+          "issues": []
+        }
+      },
+      "ground_truth": {
+        "irpp_annual": 13617.2,
+        "cnss_annual": 5808.0,
+        "net_monthly": 3381.23
+      },
+      "status": "OK"
+    }
+  ]
+}
